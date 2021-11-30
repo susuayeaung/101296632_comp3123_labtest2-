@@ -1,4 +1,4 @@
-![Getting Started](./src/result.jpg)
+<img src="src/result.png" alt="result">
 
 # Getting Started with Create React App
 
