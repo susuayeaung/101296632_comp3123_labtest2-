@@ -8,11 +8,13 @@ export default function GetWeather() {
 
     let d = new Date();
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const cities = ['Ottawa', 'Edmonton', 'Victoria', 'Winnipeg', 'Fredericton', 'St. John\'s', 'Halifax', 'Toronto', 'Charlottetown', 'Quebec City', 'Regina', 'Yellowknife', 'Iqaluit', 'Whitehorse'];
+    let city = cities[Math.floor(Math.random() * cities.length)];
     let weekDay = days[d.getDay()];
 
     const icon = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`
  
-    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=d015031761f25a35bd9e4b3e71e85352'
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d015031761f25a35bd9e4b3e71e85352`
 
     useEffect(() => {
         axios.get(apiUrl)
