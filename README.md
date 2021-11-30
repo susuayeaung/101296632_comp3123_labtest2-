@@ -1,5 +1,5 @@
-### COMP3123 Lab Test 2
-## Su Su Aye Aung, Student ID: 101296632
+## COMP3123 Lab Test 2
+### Su Su Aye Aung, Student ID: 101296632
 <img src="src/result.png" alt="result">
 
 # Getting Started with Create React App

@@ -41,10 +41,9 @@
   background-image: url("sky.jpg");
   margin: auto;
   width: 80vh;
-  height: 52vh;
+  height: 60vh;
   border: solid;
   border-radius: 15px;
-  padding: 10px;
 }
 
 .bold {
@@ -57,5 +56,9 @@ button {
 }
 
 tab { 
-  padding-left: 4em; 
+  padding-left: 1em; 
+}
+
+tab2 { 
+  padding-left: 2em; 
 }

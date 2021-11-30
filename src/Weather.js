@@ -25,6 +25,9 @@ export default function GetWeather() {
                 feels_like: res.data.main.feels_like,
                 humidity: res.data.main.humidity,
                 name: res.data.name,
+                country: res.data.sys.country,
+                wind_speed: res.data.wind.speed,
+                time: res.data.timezone,
              })
         })
         .catch(error => console.log(error))
@@ -33,14 +36,18 @@ export default function GetWeather() {
     return (
         <div class='mainScreen'>
             <p class="bold">{weather.name}</p>
+            <p>{weather.country}</p>
             <div>
                 <img src={icon} alt='weatherIcon'/>
                 <p class="bold">{weather.temp} ℉</p>
                 <p class="bold">{weather.main}</p>
                 <p>{weekDay}</p>
                 <div>
-                    <p>Description: {weather.description} <tab>Feels like: {weather.feels_like} ℉ </tab>  </p>
-                    <p>Humidity: {weather.humidity} %</p>
+                    <p>
+                        Feels like: {weather.feels_like} ℉<tab>Description: {weather.description}</tab>
+                        <tab>Wind Speed: {weather.wind_speed}</tab><br/>
+                        Humidity: {weather.humidity} %
+                    </p>
                 </div>
             </div>
         </div>
