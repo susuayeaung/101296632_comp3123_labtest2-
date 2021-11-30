@@ -30,6 +30,8 @@ export default function GetWeather() {
                 country: res.data.sys.country,
                 wind_speed: res.data.wind.speed,
                 time: res.data.timezone,
+                sunrise: res.data.sys.sunrise,
+                sunset: res.data.sys.sunset,
              })
         })
         .catch(error => console.log(error))
@@ -46,8 +48,8 @@ export default function GetWeather() {
                 <p>{weekDay}</p>
                 <div>
                     <p>
-                        Feels like: {weather.feels_like} ℉<tab>Description: {weather.description}</tab>
-                        <tab>Wind Speed: {weather.wind_speed}</tab><br/>
+                        Feels like: {weather.feels_like} ℉<tab>Description: {weather.description}</tab><tab>Wind Speed: {weather.wind_speed}</tab><br/>
+                        <tab>Sunrise: {weather.sunrise}</tab><tab>Sunset: {weather.sunset}</tab><tab>Timezone: {weather.time}</tab><br/>
                         Humidity: {weather.humidity} %
                     </p>
                 </div>
